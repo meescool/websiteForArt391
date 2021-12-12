@@ -1,0 +1,45 @@
+<%- include('partials/header') %>
+
+<h1> <%- titleName %> </h1>
+
+<div class="summary">
+  <div class="">
+    <img src="" alt="">
+    <p>Location</p>
+    <p> <%- location %> </p>
+  </div>
+  <div class="">
+    <img src="" alt="">
+    <p>Length</p>
+    <p>  <%- length %> </p>
+  </div>
+  <div class="">
+    <img src="" alt="">
+    <p>Paid</p>
+    <p>  <%- paid %> </p>
+  </div>
+</div>
+
+<div class="gallery">
+  <% projects.forEach(function(e){ %>
+    <div class="section">
+      <div class="card">
+        <h3> <%- e.name %> </h3>
+        <p> <%- e.desc%> </p>
+      </div>
+      <div class="card img">
+        <p> <%- e.img[0]%> </p>
+      </div>
+    </div>
+  <% }); %>
+</div>
+
+<div class="overlay">
+  <button type="button" name="button"></button>
+  <div class="images">
+
+  </div>
+
+</div>
+
+<%- include('partials/footer') %>
