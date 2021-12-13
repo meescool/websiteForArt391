@@ -1,0 +1,237 @@
+:root{
+  --textcolor: white;
+  --terciary: #1A0238;
+  --primary: #6600CC;
+  --secondary: #2A0658;
+  --btn: #64FFC7;
+  --font1:'Pridi', serif;
+  --font2:'Roboto', sans-serif;
+}
+
+body{
+  background-color: var(--secondary);
+  color: var(--textcolor);
+  font-size: 1.3rem;
+  font-family: var(--font2);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1{
+  font-family: var(--font1);
+  font-size: 6rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: var(--font1);
+}
+
+button{
+  background-color: var(--btn);
+  color: var(--terciary);
+  font-size: 1.3rem;
+  font-family: var(--font1);
+  box-shadow:none;
+  border:none;
+  border-radius: 1rem;
+  padding: 1rem;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transform: scale(100%);
+}
+
+button:hover{
+  transform: scale(115%);
+}
+
+.content{
+  width: 90vw;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* banner */
+.heroBanner{
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  margin: 0;
+}
+.heroBanner .heroText{
+}
+.heroBanner h1{
+  font-family: var(--font1);
+  font-size: 4rem;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 0;
+  margin-top: 8rem;
+  margin-left: -1rem;
+}
+
+.heroBanner h1 span{
+  font-size: 8rem;
+}
+
+.heroBanner h2 {
+  font-family: var(--font2);
+  margin: 0;
+  text-transform: capitalize;
+  text-align: left;
+}
+
+.heroBanner .heroText{
+
+}
+.heroBanner .bar{
+  background-color: var(--primary);
+}
+
+.heroBanner .leftBars{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.heroBanner .leftBars .bar{
+  background-color: var(--primary);
+  border-radius: 0 0 2rem 2rem;
+  margin-left: 1rem;
+}
+
+.heroBanner .leftBars .bar.one{
+  height: 20rem;
+  width: 4rem;
+}
+
+.heroBanner .leftBars .bar.two{
+  height: 10rem;
+  width: 2rem;
+}
+
+
+.heroBanner .rightBars{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  right:0;
+}
+
+.heroBanner .rightBars .bar{
+  background-color: var(--primary);
+  border-radius: 2rem 0 0 2rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.heroBanner .rightBars .bar.one{
+  width: 60vw;
+  height: 4rem;
+  padding-left: 1rem;
+}
+
+.heroBanner .rightBars .bar.two{
+  width: 30vw;
+  height: 2rem;
+}
+
+/* cloud main page */
+.cloud{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cloud * {
+}
+
+.cloud.top{
+  margin-top: 20rem;
+  background-color: var(--terciary);
+  border-radius: 10rem 10rem 0 0;
+  width: 15rem;
+  height: 7rem;
+}
+
+.cloud.bottom{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.cloud.middle{
+  background-color: var(--terciary);
+  border-radius: 10rem 10rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40rem;
+  height: 20rem;
+}
+
+.cloud.middle p{
+  margin: 1rem;
+  text-align: center;
+}
+.cloud.side{
+  width: 10rem;
+  height: 10rem;
+  background-color: var(--terciary);
+}
+
+.cloud.left{
+  border-radius: 10rem 0 0 10rem;
+}
+
+.cloud.right{
+  border-radius: 0 10rem 10rem 0;
+}
+
+/* internship pages */
+h2.internship{
+  font-size: 5rem;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summary {
+  background-color: var(--terciary);
+  width: 40rem;
+  height: auto;
+  padding: 3rem;
+  border-radius: 3rem;
+}
+
+.gallery{
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery .section{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.gallery .card{
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--terciary);
+  margin: 1rem;
+  border-radius: 3rem;
+}
+/* footer */
