@@ -8,11 +8,13 @@ const evmProjects = [
 
 const ellProjects = [
   {
+    'id': 'one',
     'name': 'poster 1',
     'desc': 'this is a poster',
-    'img': ['first image','second image'],
+    'img': ['first image','second image','third image'],
   },
   {
+    'id': 'two',
     'name': 'poster 2',
     'desc': 'this is a poster',
     'img': ['first image','second image'],
@@ -24,6 +26,7 @@ module.exports.evm = {
   location: 'Norfolk, NE',
   length: '3 months',
   paid: 'Yes',
+  desc: 'This is a descrption',
   projects: evmProjects
 }
 

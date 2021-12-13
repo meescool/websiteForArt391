@@ -2,12 +2,15 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
+    <title> <%= titleName %> | Marcela Estrada</title>
+
   </head>
   <body>
-  <div class="header">
+  <header>
     <% if (titleName !='Home') { %>
       <%- include('logo') %>
     <% } %>
     <%- include('nav') %>
-  </div>
+
+  </header>
