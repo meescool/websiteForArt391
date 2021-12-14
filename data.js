@@ -27,6 +27,7 @@ module.exports.evm = {
   length: '3 months',
   paid: 'Yes',
   desc: 'This is a descrption',
+  theme: 'night',
   projects: evmProjects
 }
 
@@ -36,5 +37,6 @@ module.exports.ell = {
   length: '10 hours',
   paid: 'No',
   desc: 'This is a descrption',
+  theme: 'night',
   projects: ellProjects
 }

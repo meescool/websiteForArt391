@@ -8,6 +8,12 @@ const util = require(__dirname + '/data.js');
 
 const app = express();
 
+
+const data = {
+  titleName:'Home',
+  theme: 'night',
+}
+
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({
@@ -18,17 +24,13 @@ app.use(express.static('public'));
 
 
 app.get('/', function(req,res){
-  const data = {
-    titleName:'Home'
-  }
+  data.titleName='Home'
   res.render('index', data )
 });
 
 app.get('/:pageName', function(req,res){
   const tempName = lodash.toLower(req.params.pageName);
-  let data = {
-    titleName:'404'
-  }
+  data.titleName = '404';
 
   if(tempName == 'elkhornvalleymuseum') {
     let data = util.evm;

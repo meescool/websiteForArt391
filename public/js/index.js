@@ -9,5 +9,5 @@ function closeMenu(){
 
 function openMenu(){
   menuBtn.disabled = true;
-  menu.style.display = 'block';
+  menu.style.display = 'flex';
 }

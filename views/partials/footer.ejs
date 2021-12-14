@@ -1,7 +1,4 @@
 
-<script type="text/javascript" src="../js/index.js">
-
-</script>
 <footer>
   <div class="top">
     <div class="hill">
@@ -18,13 +15,25 @@
     </div>
   </div>
   <div class="bottom">
-    <ul>
-      <li>home</li>
-      <li>elkhorn valley museum</li>
-      <li>eco learning legacies</li>
-    </ul>
+    <nav>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="ecolearninglegacies">eco learning legacies</a></li>
+        <li><a href="elkhornvalleymuseum">elkhorn valley museum</a></li>
+      </ul>
+    </nav>
+
     <p>created by marcela estrada</p>
   </div>
 </footer>
+
+
+<script type="text/javascript" src="../js/index.js">
+
+</script>
+<% if(titleName != 'Home'){ %>
+  <script type="text/javascript" src="/js/overlay.js">
+  </script>
+<% } %>
 </body>
 </html>

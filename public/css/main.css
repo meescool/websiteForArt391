@@ -12,13 +12,21 @@ body{
   background-color: var(--secondary);
   color: var(--textcolor);
   font-size: 1.3rem;
-  font-family: var(--font2);
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+p{
+  font-family: var(--font2);
+}
+
+a {
+  font-size: 1.6rem;
+}
+
 h1{
   font-family: var(--font1);
   font-size: 6rem;
@@ -33,7 +41,7 @@ h2 {
 button{
   background-color: var(--btn);
   color: var(--terciary);
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-family: var(--font1);
   box-shadow:none;
   border:none;
@@ -55,6 +63,165 @@ button:hover{
   align-items: center;
 }
 
+/* main nav */
+.menu nav{
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 30rem;
+  height: 30rem;
+  border-bottom-left-radius: 30rem;
+  background-color: var(--terciary);
+  border-bottom: 1rem solid var(--secondary);
+  border-left: 1rem solid var(--secondary);
+  z-index: 2;
+}
+
+.menu nav ul {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu nav ul li {
+  list-style: none;
+  margin: 1rem;
+}
+
+.menu nav a{
+  text-decoration: none;
+  color: var(--textcolor);
+  text-transform: capitalize;
+  font-family: var(--font1);
+  padding: 0.3rem;
+  border-radius: 1rem;
+  border: 1rem solid transparent;
+  transition-property: all;
+  transition-duration: 0.2s
+}
+
+.menu nav a:link{
+  color: var(--textcolor);
+}
+
+.menu nav a:hover{
+  border: 1rem solid var(--secondary);
+}
+
+.menu nav button {
+  display: flex;
+  background: none;
+  border-radius: none;
+
+}
+
+.menu nav button * {
+  width: 1.5rem;
+  height: 4rem;
+  border-radius: 0;
+  background-color: var(--btn);
+}
+
+.menu nav button .x:first-child {
+  transform: rotate(40deg);
+}
+
+.menu nav button .x:last-child {
+  margin-left: -1.5rem;
+  transform: rotate(-40deg);
+}
+
+.menu .menuBtn {
+  position: fixed;
+  z-index: 1;
+  top: 1rem;
+  right: 2rem
+}
+
+/* logo */
+.logo{
+  position: fixed;
+  top:0;
+  left: 2rem;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+}
+
+a.logo {
+  color:white;
+}
+
+a.logo:hover .logo{
+  color:var(--primary)
+}
+
+a.logo:hover .bars *{
+  background-color: var(--textcolor)
+}
+
+.logo .bars {
+  display: flex;
+  flex-direction: row;
+}
+.logo .bars *{
+  background-color: var(--primary);
+  border-radius: 0 0 1rem 1rem
+}
+
+.logo .bar.one{
+  width: 1rem;
+  height: 5rem;
+}
+
+.logo .bar.two{
+  width: 0.7rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+}
+
+.logo h1 {
+  margin-top: 0.5rem;
+  margin-left: -0.5rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.logo h1 span {
+  font-size: 3rem;
+}
+/* day night */
+.daynight{
+  position: fixed;
+  top: 1rem;
+  right: 10rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.daynight button{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0;
+  opacity: 0.4;
+  font-size: 1rem;
+  color: var(--textcolor);
+  background-color: var(--terciary)
+}
+
+.daynight button:first-child{
+
+}
+
+.daynight button:hover {
+  opacity: 1;
+}
 /* banner */
 .heroBanner{
   display: flex;
@@ -72,6 +239,7 @@ button:hover{
   margin: 0;
   margin-top: 8rem;
   margin-left: -1rem;
+  margin-right: 8rem;
 }
 
 .heroBanner h1 span{
@@ -148,11 +316,8 @@ button:hover{
   align-items: center;
 }
 
-.cloud * {
-}
-
 .cloud.top{
-  margin-top: 20rem;
+  margin-top: 15rem;
   background-color: var(--terciary);
   border-radius: 10rem 10rem 0 0;
   width: 15rem;
@@ -163,6 +328,7 @@ button:hover{
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  margin-bottom: 10rem;
 }
 
 .cloud.middle{
@@ -193,9 +359,47 @@ button:hover{
   border-radius: 0 10rem 10rem 0;
 }
 
+/* home page sections */
+
+.sections{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width:100%;
+}
+
+.sections *{
+
+}
+
+.sections .left, .sections .right{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary);
+  width: 60vw;
+  margin-top: 2rem;
+  padding: 3rem
+}
+
+.sections .left{
+  border-radius: 0 10rem 10rem 0;
+  align-self: flex-start;
+  align-items: flex-end;
+  padding-right: 7rem;
+}
+
+.sections .right{
+  border-radius: 10rem 0 0 10rem;
+  align-self: flex-end;
+  align-items: flex-start;
+  padding-left: 7rem;
+}
+
+
 /* internship pages */
 h2.internship{
   font-size: 5rem;
+  margin-top: 8rem;
 }
 
 .content{
@@ -211,6 +415,20 @@ h2.internship{
   padding: 3rem;
   border-radius: 3rem;
 }
+
+.summary .section {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0;
+}
+
+.summary .section *{
+  margin: 0;
+  margin-right: 1rem;
+
+}
+
+
 
 .gallery{
   display: flex;
@@ -234,4 +452,94 @@ h2.internship{
   margin: 1rem;
   border-radius: 3rem;
 }
+/* overlay */
+.overlay{
+  display: none;
+}
+
+
 /* footer */
+footer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+footer .top {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-around;
+  z-index: 0;
+}
+footer .top .hill{
+  background-color: var(--primary);
+  box-shadow: -0.3rem -0.3rem 0 var(--textcolor);
+  border-radius: 20rem 20rem 0 0;
+}
+
+footer .top .hill:first-child{
+  width: 3rem;
+  height: 2rem;
+}
+
+footer .top .hill:nth-child(2){
+  width: 20rem;
+  height: 15rem;
+}
+
+footer .top .hill:nth-child(3){
+  width: 5rem;
+  height: 3rem;
+}
+
+footer .top .hill:last-child{
+  width: 15rem;
+  height: 8rem;
+}
+
+footer .bottom {
+  padding-top: 8rem;
+  padding-bottom: 1rem;
+  background-color: var(--primary);
+  box-shadow: 0 -0.4rem 0 var(--textcolor);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-around;
+
+}
+
+footer .bottom ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+footer .bottom ul li {
+  margin: 0 1rem;
+
+}
+
+footer .bottom ul li a {
+  text-decoration: none;
+  font-family: var(--font1);
+  color: var(--textcolor);
+  text-transform: capitalize;
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+
+footer .bottom ul li a:hover {
+  color:var(--terciary);
+}
+
+footer p {
+  margin: 0 1rem;
+  font-size: 1rem;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
