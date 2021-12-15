@@ -28,6 +28,7 @@ module.exports.evm = {
   paid: 'Yes',
   desc: 'This is a descrption',
   theme: 'night',
+  url: 'elkhornvalleymuseum',
   projects: evmProjects
 }
 
@@ -38,5 +39,6 @@ module.exports.ell = {
   paid: 'No',
   desc: 'This is a descrption',
   theme: 'night',
+  url: 'ecolearninglegacies',
   projects: ellProjects
 }
