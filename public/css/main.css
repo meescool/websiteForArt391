@@ -7,11 +7,30 @@
 
 }
 
+@keyframes animate {
+  0% {
+    transform: scale(102%);
+    opacity: 1;
+  },
+  100% {
+    transform: rotate(100%);
+    opacity: 1;
+  }
+
+
+}
 .night {
   --textcolor: white;
   --terciary: #1A0238;
   --primary: #6600CC;
   --secondary: #2A0658;
+  /* animation-name: animate;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier();
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-iteration-count: 1; */
 
 }
 
@@ -21,7 +40,9 @@
   --primary: #FFB067;
   --secondary: #FFE0A3;
 }
+body * {
 
+}
 body{
   background-color: var(--secondary);
   color: var(--textcolor);

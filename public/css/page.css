@@ -31,7 +31,6 @@ h2.internship{
 }
 
 
-
 .gallery{
   display: flex;
   flex-direction: column;
@@ -59,18 +58,65 @@ h2.internship{
   display: none;
   position: fixed;
   top: 0;
-  width: 10rem;
-  height: 10rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.7);
   z-index: 2;
-
 }
 
-.images {
-  position: relative;
-  height: 100rem;
-  width: 10rem;
-  background-color: var(--primary);
+.overlay .close{
+  position:fixed;
+  top: 1rem;
+  right: 2rem;
+}
+.overlay .images {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  height: 99vh;
+  width: auto;
+}
+
+.images img {
+  height: 100%;
+}
+
+.images button{
+  background-color: transparent;
+  /* clip-path:path('M 0, 10 C 0,5 0,0 10,0 L 40,15 C 40,15 45,20 40,30 L 10,50 C 10,50 5,50 0,40' ); */
+  width: 4rem;
+  height: 4rem;
+  border-top: 1.6rem solid var(--btn);
+  border-right: 1.3rem solid var(--btn);
+  border-radius: 0;
+  transform: rotate(45deg);
+  transition-property: all;
+  transition-duration: 0.2s;
+  text-decoration: none;
+  box-shadow: none;
+}
+.images .leftBtn {
+  opacity: 0;
+  cursor:default;
+  transform: rotate(-135deg);
+    /* animation-name: pulseArrowLeft;
+    animation-duration: 1s;
+    animation-timing-function:linear;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running; */
+}
+
+.images .rightBtn:hover {
+  transform: rotate(45deg) scale(120%);
+}
+
+.images .leftBtn:hover {
+  transform: rotate(-135deg) scale(120%);
 }
