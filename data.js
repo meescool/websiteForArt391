@@ -11,13 +11,13 @@ const ellProjects = [
     'id': 'one',
     'name': 'poster 1',
     'desc': 'this is a poster',
-    'img': ['first image','second image','third image'],
+    'img': ['dwarf.png','elf.png','knight.png'],
   },
   {
     'id': 'two',
     'name': 'poster 2',
     'desc': 'this is a poster',
-    'img': ['first image','second image'],
+    'img': ['wizard.png','orc.png'],
   }
 ]
 
