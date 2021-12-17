@@ -63,8 +63,32 @@ h2.internship{
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.9);
   z-index: 2;
+}
+
+
+.overlay button.close {
+  display: flex;
+  background: none;
+  border-radius: none;
+
+}
+
+.overlay button.close  * {
+  width: 1.5rem;
+  height: 4rem;
+  border-radius: 0;
+  background-color: var(--btn);
+}
+
+.overlay button.close .x:first-child {
+  transform: rotate(40deg);
+}
+
+.overlay button.close .x:last-child {
+  margin-left: -1.5rem;
+  transform: rotate(-40deg);
 }
 
 .overlay .close{
@@ -77,8 +101,15 @@ h2.internship{
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  height: 99vh;
   width: auto;
+}
+
+.overlay .imageHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 98vh;
 }
 
 .images img {

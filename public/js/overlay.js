@@ -5,6 +5,7 @@ const imgContainer = document.getElementById('imagesContainer');
 function showOverlay(e){
   // turn images into an array
   const images = e.split(',');
+  console.log(images)
 
   // create buttons
   if (images.size == 1){
@@ -18,10 +19,18 @@ function showOverlay(e){
     leftArrow.classList.add('leftBtn');
     imgContainer.appendChild(leftArrow);
 
+    const imgHolder= document.createElement('div');
+    imgHolder.classList.add('imageHolder');
+    imgContainer.appendChild(imgHolder);
+
     const imgTag = document.createElement('img');
     imgTag.setAttribute('src','../img/' + images[0]);
     imgTag.setAttribute('id', images[0]);
-    imgContainer.appendChild(imgTag);
+    imgHolder.appendChild(imgTag);
+
+    const imgDesc= document.createElement('p');
+    imgDesc.innerHTML= images[0];
+    imgHolder.appendChild(imgDesc);
 
     const rightArrow = document.createElement('button');
     rightArrow.classList.add('rightBtn');
@@ -29,10 +38,10 @@ function showOverlay(e){
 
     console.log(imgTag.getAttribute('id'));
 
-    setArrowsEvent(rightArrow, leftArrow, imgTag, images);
+    setArrowsEvent(rightArrow, leftArrow, imgTag, images, imgDesc);
   }
 
-  function setArrowsEvent(r, l, image, images){
+  function setArrowsEvent(r, l, image, images, p){
 
     r.addEventListener('click', function(e){
       let index = 0;
@@ -40,18 +49,19 @@ function showOverlay(e){
 
         if(item == image.getAttribute('id')){
 
-          if(images.length-1 === i ){
+          if(images.length-2 === i ){
             index = 0;
           }
           else{
-            index = i + 1;
+            index = i + 2;
           }
           return index;
         }
       });
       image.setAttribute('src','../img/'+images[index]);
       image.setAttribute('id',images[index]);
-      setArrows(r, l, index, images.length - 1);
+      p.innerHTML = images[index + 1];
+      setArrows(r, l, index, images.length - 2);
     });
 
     l.addEventListener('click', function(e){
@@ -60,17 +70,18 @@ function showOverlay(e){
         if(item == image.getAttribute('id')){
 
             if(0 === i ){
-              index = images.length-1;
+              index = images.length-2;
             }
             else{
-              index = i - 1;
+              index = i - 2;
             }
           return index;
         }
       });
       image.setAttribute('src','../img/'+images[index]);
       image.setAttribute('id',images[index]);
-      setArrows(r, l, index, images.length - 1);
+      p.innerHTML = images[index + 1];
+      setArrows(r, l, index, images.length - 2);
     });
   }
 
