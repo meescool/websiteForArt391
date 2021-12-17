@@ -30,10 +30,15 @@
       <div class="card">
         <h3> <%- e.name %> </h3>
         <p> <%- e.desc%> </p>
-        <button id= "<%- e.id %>" onclick="showOverlay('<%- e.img %>')" type="button" name="galleryButtons" >  <%- e.id %> </button>
+        <button id= "<%- e.id %>" onclick="showOverlay('<%- e.img %>')" type="button" name="galleryButtons" >
+          <% if(e.img.length == 1) { %>
+            See Design
+          <% } else {  %>
+            See Designs
+          <% } %>
+        </button>
       </div>
-      <div class="card img">
-        <p> <%- e.img[0]%> </p>
+      <div class="card img" style="background-image:url('img/<%- e.img[0][0]%>')">
       </div>
     </div>
   <% }); %>

@@ -5,16 +5,26 @@ const imgContainer = document.getElementById('imagesContainer');
 function showOverlay(e){
   // turn images into an array
   const images = e.split(',');
-  console.log(images)
+  console.log(images.length)
 
-  // create buttons
-  if (images.size == 1){
+  if (images.length == 2){
+    const imgHolder= document.createElement('div');
+    imgHolder.classList.add('imageHolder');
+    imgContainer.appendChild(imgHolder);
+
     const imgTag = document.createElement('img');
-    imgTag.setAttribute('src') = images[0];
-    imgContainer.appendChild(imgTag);
+    imgTag.setAttribute('src','../img/' + images[0]);
+    imgTag.setAttribute('id', images[0]);
+    imgHolder.appendChild(imgTag);
+
+    const imgDesc= document.createElement('p');
+    imgDesc.innerHTML= images[1];
+    imgHolder.appendChild(imgDesc);
   }
 
   else {
+    // create buttons
+
     const leftArrow = document.createElement('button');
     leftArrow.classList.add('leftBtn');
     imgContainer.appendChild(leftArrow);
@@ -29,17 +39,27 @@ function showOverlay(e){
     imgHolder.appendChild(imgTag);
 
     const imgDesc= document.createElement('p');
-    imgDesc.innerHTML= images[0];
+    imgDesc.innerHTML= images[1];
     imgHolder.appendChild(imgDesc);
 
     const rightArrow = document.createElement('button');
     rightArrow.classList.add('rightBtn');
     imgContainer.appendChild(rightArrow);
 
-    console.log(imgTag.getAttribute('id'));
-
     setArrowsEvent(rightArrow, leftArrow, imgTag, images, imgDesc);
+
   }
+
+  // disable buttons
+  galleryBtns.forEach((item, i) => {
+    item.disabled = true;
+  });
+
+  // show the overlay
+  overlay.style.display = 'flex';
+
+}
+
 
   function setArrowsEvent(r, l, image, images, p){
 
@@ -110,16 +130,6 @@ function showOverlay(e){
       arrow.style.cursor = 'pointer';
     }
   }
-
-  // disable buttons
-  galleryBtns.forEach((item, i) => {
-    item.disabled = true;
-  });
-
-  // show the overlay
-  overlay.style.display = 'flex';
-
-}
 
 function closeOverlay(e){
   // get the first child of the image container

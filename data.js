@@ -1,9 +1,102 @@
 const evmProjects = [
+   {
+    'name': 'Renew School House TextBook',
+    'desc': 'Redesigned a student workbook for the museum.',
+    'img': [
+	['DedermanCover.png', 'Final design for the 1930s Dederman Schoolhouse textbook']],
+  },
   {
-    'name': '',
-    'desc': '',
-    'img': [''],
+    'name': 'Dia De Muertos Poster Design',
+    'desc': 'My supervisor assigned me with the task to create some poster designs for the Day of the Dead.',
+    'img': [['DiaDeMuertos1.png','Design 1'],
+	['DiaDeMuertos2.png','Design 2'],
+	['DiaDeMuertos3.png','Design 3'],
+	['DiaDeMuertos4.png','Design 4'],
+	['DiaDeMuertos5.png','Design 5']]
+  },
+  {
+    'name': 'Fall - Winter Schedule Cover',
+    'desc': 'Designed the cover for a pamphlete that contained the scheduled activities of the museum during the fall and winter.',
+    'img': [['FallWinterSchedule.png', 'Final design for the cover']]
+  },
+  {
+    'name': 'Harvest and History Fest Designs',
+    'desc': 'I worked on creating several designs for the Harvest and History Fest. ',
+    'img': [['HarvestFestPoster.png', 'Final design for the poster'],
+	['harvestDraftsLogo.png','Initial drafts made for the logo.'],
+	['harvestFinalLogo.png','Final logo design']]
+  },
+  {
+    'name': 'Haunted Verges Park',
+    'desc': 'I worked on creating several designs for Haunted Verges Park. ',
+    'img': [
+	['HauntedIllustration.jpg', 'Concept art for the poster'],
+	['HauntedDraft.jpg','Draft Design'],
+	['HauntedPosterExample.jpg','An example poster design'],
+	['HauntedFinalPoster.jpg','Final poster design'],
+	['HauntedFinalBanner.jpg','Final banner design']]
+  },
+  {
+    'name': 'Johnny Carson Birthday',
+    'desc': 'I worked on creating several designs for Haunted Verges Park. ',
+    'img': [
+	['JCBanner.jpg', 'Concept art for the poster'],
+	['JCBannerEx.jpg','Draft Design'],
+	['JCPoster.jpg','An example poster design']]
+  },
+  {
+    'name': 'Kids Night In',
+    'desc': 'I worked on creating several designs for Haunted Verges Park. ',
+    'img': [
+	['KidsNightBanner.jpg', 'Concept art for the poster'],
+	['KidsNightPoster.jpg','Draft Design']]
+  },
+  {
+    'name': 'News Letter Illustration',
+    'desc': 'I worked on creating several designs for Haunted Verges Park. ',
+    'img': [
+	['NewsLetterIllustration.png', 'Concept art for the poster']]
+  },
+  {
+    'name': 'On the Mic',
+    'desc': 'I worked on creating several designs for Haunted Verges Park. ',
+    'img': [
+	['OnTheMic.png', 'Concept art for the poster'],
+	['OnTheMic_1.png','Draft Design'],
+	['OnTheMic_2.png','An example poster design'],
+	['OnTheMic_3.png','Final poster design'],
+	['OnTheMic_4.png','Final banner design']]
+  },
+  {
+    'name': 'Pioneers',
+    'desc': 'I worked on creating several designs for Haunted Verges Park. ',
+    'img': [
+	['PioneerBanner.jpg', 'Concept art for the poster'],
+	['PioneerPoster.jpg','Draft Design']]
+  },
+  {
+    'name': 'Saturday',
+    'desc': 'I worked on creating several designs for Haunted Verges Park. ',
+    'img': [
+	['SaturdayBanner.jpg', 'Concept art for the poster'],
+	['SaturdaySmall.jpg','Draft Design']]
+  },
+  {
+    'name': 'Story Time',
+    'desc': 'I worked on creating several designs for Haunted Verges Park. ',
+    'img': [
+	['StoryTime.jpg', 'Concept art for the poster'],
+	['StoryTimeNervous.jpg','Draft Design'],
+	['StoryTimeBanner.jpg','An example poster design'],
+	['StoryTimePoster.jpg','Final poster design']]
+  },
+  {
+    'name': 'Time Machine',
+    'desc': 'I worked on creating several designs for Haunted Verges Park. ',
+    'img': [
+	['TimeMachine.png', 'Concept art for the poster']]
   }
+  
 ]
 
 const ellProjects = [

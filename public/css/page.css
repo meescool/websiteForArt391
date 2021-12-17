@@ -32,6 +32,7 @@ h2.internship{
 
 
 .gallery{
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
 }
@@ -51,7 +52,15 @@ h2.internship{
   align-items: center;
   background-color: var(--terciary);
   margin: 1rem;
+  padding: 1rem;
   border-radius: 3rem;
+}
+
+.gallery .card.img {
+  background-position: center;
+  background-size: cover;
+  background-attachment:local;
+  background-repeat: no-repeat;
 }
 /* overlay */
 .overlay{
@@ -110,6 +119,10 @@ h2.internship{
   align-items: center;
   justify-content: center;
   height: 98vh;
+}
+
+.images p {
+  color: white;
 }
 
 .images img {
