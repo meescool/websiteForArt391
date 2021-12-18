@@ -173,3 +173,33 @@ h2.internship{
 .images .leftBtn:hover {
   transform: rotate(-135deg) scale(120%);
 }
+
+
+@media screen and (min-width:200px) and (max-width:900px) {
+  h2.internship{
+    font-size: 3rem;
+    margin-top: 8rem;
+  }
+
+  .summary {
+    width: 80vw;
+  }
+
+  .gallery .card{
+    width: 80vw;
+    height: 30rem;
+  }
+
+  .images img {
+    width: 70%;
+    height: auto;
+  }
+
+  .images button{
+    margin: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-top: 1rem solid var(--btn);
+    border-right: .7rem solid var(--btn);
+  }
+}
