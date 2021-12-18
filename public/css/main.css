@@ -1,10 +1,7 @@
 :root{
   --font1:'Pridi', serif;
-  --font2:'Roboto', sans-serif;
-  --btn: #64FFC7;
+  --font2: 'Raleway', sans-serif;
   --btnText: #1A0238;
-  --footerShadow: #fff;
-
 }
 
 @keyframes animate {
@@ -24,13 +21,9 @@
   --terciary: #1A0238;
   --primary: #6600CC;
   --secondary: #2A0658;
-  /* animation-name: animate;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-timing-function: cubic-bezier();
-  animation-direction: normal;
-  animation-play-state: running;
-  animation-iteration-count: 1; */
+  --footerShadow: #1A0238;
+  --btn: #64FFC7;
+
 
 }
 
@@ -39,6 +32,9 @@
   --terciary: #fff;
   --primary: #FFB067;
   --secondary: #FFE0A3;
+  --footerShadow: #fff;
+  --btn: #FF7C92;
+
 }
 body * {
 
@@ -95,6 +91,8 @@ button{
 
 button:hover{
   transform: scale(115%);
+  background-color: var(--primary);
+
 }
 
 .content{
@@ -166,6 +164,10 @@ button:hover{
   height: 4rem;
   border-radius: 0;
   background-color: var(--btn);
+}
+
+.menu nav button:hover * {
+  background-color: var(--primary);
 }
 
 .menu nav button .x:first-child {
@@ -247,17 +249,21 @@ a.logo:hover .bars *{
 }
 
 .daynight button{
+  margin: 0 0.3rem;
   width: 4rem;
   height: 4rem;
   border-radius: 0;
-  opacity: 0.4;
   font-size: 1rem;
+  border-radius: 1rem;
   color: var(--textcolor);
-  background-color: var(--terciary)
 }
 
 .daynight button:first-child{
+  background-color: var(--textcolor);
+}
 
+.daynight button:last-child{
+  background-color: var(--terciary)
 }
 
 .daynight button:hover {
@@ -353,39 +359,32 @@ a.logo:hover .bars *{
 
 /* cloud main page */
 .cloud{
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.cloud.top{
-  margin-top: 15rem;
-  background-color: var(--terciary);
-  border-radius: 10rem 10rem 0 0;
-  width: 15rem;
-  height: 7rem;
-}
-
-.cloud.bottom{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  margin-bottom: 10rem;
-}
 
 .cloud.middle{
   background-color: var(--terciary);
-  border-radius: 10rem 10rem 0 0;
+  border-radius: 3rem;
+  padding: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40rem;
-  height: 20rem;
+  padding: 3rem;
 }
 
 .cloud.middle p{
-  margin: 1rem;
-  text-align: center;
+  text-align: left;
+}
+
+.welcome {
+  font-size:5rem;
+  line-height:0;
+  color:var(--primary);
 }
 .cloud.side{
   width: 10rem;
@@ -437,8 +436,17 @@ a.logo:hover .bars *{
   padding-left: 7rem;
 }
 
+.testimonial {
+  width: 40rem;
+  margin-top: 5rem;
+  background-color: var(--terciary);
+  padding: 3rem;
+  border-radius: 3rem;
+}
+
 /* footer */
 footer{
+  margin-top: 10rem;
   display: flex;
   flex-direction: column;
   width: 100%;

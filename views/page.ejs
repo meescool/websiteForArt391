@@ -7,18 +7,30 @@
 
 <div class="summary">
   <div class="section">
-    <img src="" alt="">
-    <p>Location</p>
+    <% if (theme == 'day') { %>
+      <img src="/img/icons/d_location.svg" alt="">
+    <% } else { %>
+      <img src="/img/icons/n_location.svg" alt="">
+    <% } %>
+    <p>Location:</p>
     <p> <%- location %> </p>
   </div>
   <div class="section">
-    <img src="" alt="">
-    <p>Length</p>
+    <% if (theme == 'day') { %>
+      <img src="/img/icons/d_time.svg" alt="">
+    <% } else { %>
+      <img src="/img/icons/n_time.svg" alt="">
+    <% } %>
+    <p>Length:</p>
     <p>  <%- length %> </p>
   </div>
   <div class="section">
-    <img src="" alt="">
-    <p>Paid</p>
+    <% if (theme == 'day') { %>
+      <img src="/img/icons/d_money.svg" alt="">
+    <% } else { %>
+      <img src="/img/icons/n_money.svg" alt="">
+    <% } %>
+    <p>Paid:</p>
     <p>  <%- paid %> </p>
   </div>
   <p><%- desc %></p>

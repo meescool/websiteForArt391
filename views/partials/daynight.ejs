@@ -1,8 +1,20 @@
 <div class="daynight">
   <form class="" action="/" method="post">
 
-    <button id="day" type="submit" name="themeType" value=<%= url + ',day' %>>day</button>
-    <button id="night "type="submit" name="themeType" value=<%= url + ',night' %>>night</button>
+    <button id="day" type="submit" name="themeType" value=<%= url + ',day' %>>
+      <% if (theme == 'night') { %>
+        <img src="/img/icons/d_day.svg" alt="">
+      <% } else { %>
+        <img src="/img/icons/n_day.svg" alt="">
+      <% } %>
+    </button>
+    <button id="night "type="submit" name="themeType" value=<%= url + ',night' %>>
+      <% if (theme == 'day') { %>
+        <img src="/img/icons/d_night.svg" alt="">
+      <% } else { %>
+        <img src="/img/icons/n_night.svg" alt="">
+      <% } %>
+    </button>
 
     <!-- <input type="radio" name="day" value="" onclick="javascript:submit">
     <input type="radio" name="night" value="" onclick="javascript:submit()"> -->
